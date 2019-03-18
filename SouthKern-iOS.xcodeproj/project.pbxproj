@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		400F0DBF93EE1DCB5AA3AC70 /* Pods_SouthKern_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52368845C9F75B30B70ED946 /* Pods_SouthKern_iOS.framework */; };
 		CC17C520223F638100764A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC17C51F223F638100764A5C /* GoogleService-Info.plist */; };
+		CC17C52F223F7E2F00764A5C /* SouthKern-iOS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC17C52E223F7E2F00764A5C /* SouthKern-iOS.ttf */; };
 		E21C53E52195DB7900782B60 /* GroupChannelSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */; };
 		E21C53E62195DB7900782B60 /* GroupChannelSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21C53E42195DB7900782B60 /* GroupChannelSettingsViewController.xib */; };
 		E21CDFC52165619000839683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21CDFC42165619000839683 /* AppDelegate.swift */; };
@@ -202,6 +203,7 @@
 		52368845C9F75B30B70ED946 /* Pods_SouthKern_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthKern_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A602F10646684BFD71260771 /* Pods-SouthKern-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CC17C51F223F638100764A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC17C52E223F7E2F00764A5C /* SouthKern-iOS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SouthKern-iOS.ttf"; sourceTree = "<group>"; };
 		E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelSettingsViewController.swift; sourceTree = "<group>"; };
 		E21C53E42195DB7900782B60 /* GroupChannelSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChannelSettingsViewController.xib; sourceTree = "<group>"; };
 		E21CDFC12165619000839683 /* SouthKern-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SouthKern-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -414,6 +416,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CC17C52D223F7E1000764A5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC17C52E223F7E2F00764A5C /* SouthKern-iOS.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DDAA521D90BDFBA7AA74D1FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +454,7 @@
 		E21CDFC32165619000839683 /* SouthKern-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CC17C52D223F7E1000764A5C /* Resources */,
 				CC17C51F223F638100764A5C /* GoogleService-Info.plist */,
 				E27E3FB2217E83AE0082C91C /* DownloadManager */,
 				E27E3F882177BC130082C91C /* UserProfile */,
@@ -987,6 +998,7 @@
 				E27E3FA2217911520082C91C /* OpenChannelAudioFileMessageTableViewCell.xib in Resources */,
 				E27E3F9E2179113B0082C91C /* OpenChannelAdminMessageTableViewCell.xib in Resources */,
 				E27E3F7F2177BA280082C91C /* SettingsDescriptionTableViewCell.xib in Resources */,
+				CC17C52F223F7E2F00764A5C /* SouthKern-iOS.ttf in Resources */,
 				E27E3F432176987C0082C91C /* SelectOperatorsTableViewCell.xib in Resources */,
 				E27E3F6F2177B7BD0082C91C /* SettingsTimeTableViewCell.xib in Resources */,
 				E298FFF4219F2AF6009F83D0 /* GroupChannelSettingsInviteMemberTableViewCell.xib in Resources */,
