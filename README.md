@@ -1,1 +1,1 @@
-# SendBird-iOS-Swift
+# SouthKern-iOS
