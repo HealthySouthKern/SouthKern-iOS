@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		875BF66943D4A22B9064F1B1 /* Pods_SendBird_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2F8289F5E5EFDE1D2C9038 /* Pods_SendBird_iOS.framework */; };
+		400F0DBF93EE1DCB5AA3AC70 /* Pods_SouthKern_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52368845C9F75B30B70ED946 /* Pods_SouthKern_iOS.framework */; };
+		CC17C520223F638100764A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC17C51F223F638100764A5C /* GoogleService-Info.plist */; };
 		E21C53E52195DB7900782B60 /* GroupChannelSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */; };
 		E21C53E62195DB7900782B60 /* GroupChannelSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21C53E42195DB7900782B60 /* GroupChannelSettingsViewController.xib */; };
 		E21CDFC52165619000839683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21CDFC42165619000839683 /* AppDelegate.swift */; };
@@ -197,9 +198,13 @@
 		1D2F8289F5E5EFDE1D2C9038 /* Pods_SendBird_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendBird_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6C95EE3B9E1E3E5316ABBC /* Pods-SendBird-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendBird-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SendBird-iOS/Pods-SendBird-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4AE17B58DD188A15F84A0409 /* Pods-SendBird-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendBird-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SendBird-iOS/Pods-SendBird-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		50D1AF9F3C7796C06F9761CC /* Pods-SouthKern-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		52368845C9F75B30B70ED946 /* Pods_SouthKern_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthKern_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A602F10646684BFD71260771 /* Pods-SouthKern-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CC17C51F223F638100764A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E21C53E32195DB7900782B60 /* GroupChannelSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelSettingsViewController.swift; sourceTree = "<group>"; };
 		E21C53E42195DB7900782B60 /* GroupChannelSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChannelSettingsViewController.xib; sourceTree = "<group>"; };
-		E21CDFC12165619000839683 /* SendBird-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SendBird-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21CDFC12165619000839683 /* SouthKern-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SouthKern-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21CDFC42165619000839683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E21CDFC62165619000839683 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E21CDFC92165619000839683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -219,7 +224,7 @@
 		E27E3ED6217123160082C91C /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
 		E27E3EE221712D2D0082C91C /* GroupChannelsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelsNavigationController.swift; sourceTree = "<group>"; };
 		E27E3EE421713DF00082C91C /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
-		E27E3EE621714EAB0082C91C /* SendBird-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SendBird-iOS.entitlements"; sourceTree = "<group>"; };
+		E27E3EE621714EAB0082C91C /* SouthKern-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SouthKern-iOS.entitlements"; sourceTree = "<group>"; };
 		E27E3EE7217156A60082C91C /* GroupChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChannelsViewController.swift; sourceTree = "<group>"; };
 		E27E3EE8217156A60082C91C /* GroupChannelsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupChannelsViewController.xib; sourceTree = "<group>"; };
 		E27E3EEB217159E30082C91C /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -391,7 +396,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875BF66943D4A22B9064F1B1 /* Pods_SendBird_iOS.framework in Frameworks */,
+				400F0DBF93EE1DCB5AA3AC70 /* Pods_SouthKern_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +408,8 @@
 			children = (
 				4AE17B58DD188A15F84A0409 /* Pods-SendBird-iOS.debug.xcconfig */,
 				2E6C95EE3B9E1E3E5316ABBC /* Pods-SendBird-iOS.release.xcconfig */,
+				50D1AF9F3C7796C06F9761CC /* Pods-SouthKern-iOS.debug.xcconfig */,
+				A602F10646684BFD71260771 /* Pods-SouthKern-iOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -411,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				1D2F8289F5E5EFDE1D2C9038 /* Pods_SendBird_iOS.framework */,
+				52368845C9F75B30B70ED946 /* Pods_SouthKern_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -418,7 +426,7 @@
 		E21CDFB82165619000839683 = {
 			isa = PBXGroup;
 			children = (
-				E21CDFC32165619000839683 /* SendBird-iOS */,
+				E21CDFC32165619000839683 /* SouthKern-iOS */,
 				E21CDFC22165619000839683 /* Products */,
 				62D50C290F9081E9FB190D9F /* Pods */,
 				DDAA521D90BDFBA7AA74D1FA /* Frameworks */,
@@ -428,20 +436,21 @@
 		E21CDFC22165619000839683 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E21CDFC12165619000839683 /* SendBird-iOS.app */,
+				E21CDFC12165619000839683 /* SouthKern-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E21CDFC32165619000839683 /* SendBird-iOS */ = {
+		E21CDFC32165619000839683 /* SouthKern-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CC17C51F223F638100764A5C /* GoogleService-Info.plist */,
 				E27E3FB2217E83AE0082C91C /* DownloadManager */,
 				E27E3F882177BC130082C91C /* UserProfile */,
 				E27E3F482177A86D0082C91C /* Settings */,
 				E27E3F0C21765F230082C91C /* OpenChannel */,
 				E27E3EF12174D8770082C91C /* Images */,
-				E27E3EE621714EAB0082C91C /* SendBird-iOS.entitlements */,
+				E27E3EE621714EAB0082C91C /* SouthKern-iOS.entitlements */,
 				E27E3ED921712C6D0082C91C /* GroupChannel */,
 				E21CDFDC2165767400839683 /* Misc */,
 				E21CDFD9216575EF00839683 /* Login */,
@@ -455,7 +464,7 @@
 				E27E3ED5217123160082C91C /* MainTabBarController.swift */,
 				E27E3ED6217123160082C91C /* MainTabBarController.xib */,
 			);
-			path = "SendBird-iOS";
+			path = "SouthKern-iOS";
 			sourceTree = "<group>";
 		};
 		E21CDFD6216574F300839683 /* Images */ = {
@@ -894,23 +903,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E21CDFC02165619000839683 /* SendBird-iOS */ = {
+		E21CDFC02165619000839683 /* SouthKern-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E21CDFD32165619100839683 /* Build configuration list for PBXNativeTarget "SendBird-iOS" */;
+			buildConfigurationList = E21CDFD32165619100839683 /* Build configuration list for PBXNativeTarget "SouthKern-iOS" */;
 			buildPhases = (
 				C1666900EFFF3239F9C5C037 /* [CP] Check Pods Manifest.lock */,
 				E21CDFBD2165619000839683 /* Sources */,
 				E21CDFBE2165619000839683 /* Frameworks */,
 				E21CDFBF2165619000839683 /* Resources */,
 				57774F9CC0D03BA2A16C5DCD /* [CP] Embed Pods Frameworks */,
+				B29215ED6252BB35BBC3D0A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SendBird-iOS";
+			name = "SouthKern-iOS";
 			productName = "SendBird-iOS";
-			productReference = E21CDFC12165619000839683 /* SendBird-iOS.app */;
+			productReference = E21CDFC12165619000839683 /* SouthKern-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -921,12 +931,15 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = SendBird;
+				ORGANIZATIONNAME = "Healthy South Kern";
 				TargetAttributes = {
 					E21CDFC02165619000839683 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
 								enabled = 1;
 							};
 							com.apple.Push = {
@@ -939,7 +952,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E21CDFBC2165619000839683 /* Build configuration list for PBXProject "SendBird-iOS" */;
+			buildConfigurationList = E21CDFBC2165619000839683 /* Build configuration list for PBXProject "SouthKern-iOS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -952,7 +965,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E21CDFC02165619000839683 /* SendBird-iOS */,
+				E21CDFC02165619000839683 /* SouthKern-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -964,6 +977,7 @@
 			files = (
 				E298FFFC219F358A009F83D0 /* GroupChannelSettingsLeaveChatTableViewCell.xib in Resources */,
 				E27E3F25217671000082C91C /* CreateOpenChannelViewControllerA.xib in Resources */,
+				CC17C520223F638100764A5C /* GoogleService-Info.plist in Resources */,
 				E2980008219F4919009F83D0 /* GroupChannelInviteMemberViewController.xib in Resources */,
 				E27E3EEA217156A60082C91C /* GroupChannelsViewController.xib in Resources */,
 				E27E3F17217661EE0082C91C /* OpenChannelsViewController.xib in Resources */,
@@ -1048,28 +1062,100 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SendBird-iOS/Pods-SendBird-iOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/HTMLKit/HTMLKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
 				"${BUILT_PRODUCTS_DIR}/NYTPhotoViewer/NYTPhotoViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RSKImageCropper/RSKImageCropper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework",
-				"${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTMLKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NYTPhotoViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSKImageCropper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SendBirdSDK.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/SendBirdSDK.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SendBird-iOS/Pods-SendBird-iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B29215ED6252BB35BBC3D0A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseEmailAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1666900EFFF3239F9C5C037 /* [CP] Check Pods Manifest.lock */ = {
@@ -1083,7 +1169,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SendBird-iOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SouthKern-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1286,6 +1372,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1340,6 +1427,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1349,18 +1437,18 @@
 		};
 		E21CDFD42165619100839683 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AE17B58DD188A15F84A0409 /* Pods-SendBird-iOS.debug.xcconfig */;
+			baseConfigurationReference = 50D1AF9F3C7796C06F9761CC /* Pods-SouthKern-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SendBird-iOS/SendBird-iOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "SouthKern-iOS/SouthKern-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8K8M9F9X95;
-				INFOPLIST_FILE = "SendBird-iOS/Info.plist";
+				DEVELOPMENT_TEAM = S8MJ375S2L;
+				INFOPLIST_FILE = "$(SRCROOT)/SouthKern-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendbird.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddierangel.southkern.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = SIMULATOR;
 				SWIFT_VERSION = 4.2;
@@ -1370,18 +1458,18 @@
 		};
 		E21CDFD52165619100839683 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E6C95EE3B9E1E3E5316ABBC /* Pods-SendBird-iOS.release.xcconfig */;
+			baseConfigurationReference = A602F10646684BFD71260771 /* Pods-SouthKern-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "SendBird-iOS/SendBird-iOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "SouthKern-iOS/SouthKern-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8K8M9F9X95;
-				INFOPLIST_FILE = "SendBird-iOS/Info.plist";
+				DEVELOPMENT_TEAM = S8MJ375S2L;
+				INFOPLIST_FILE = "$(SRCROOT)/SouthKern-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendbird.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eddierangel.southkern.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1391,7 +1479,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E21CDFBC2165619000839683 /* Build configuration list for PBXProject "SendBird-iOS" */ = {
+		E21CDFBC2165619000839683 /* Build configuration list for PBXProject "SouthKern-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E21CDFD12165619100839683 /* Debug */,
@@ -1400,7 +1488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E21CDFD32165619100839683 /* Build configuration list for PBXNativeTarget "SendBird-iOS" */ = {
+		E21CDFD32165619100839683 /* Build configuration list for PBXNativeTarget "SouthKern-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E21CDFD42165619100839683 /* Debug */,
