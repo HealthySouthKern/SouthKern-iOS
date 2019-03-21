@@ -69,6 +69,7 @@ fastlane/test_output
 
 # OS generated files #
 ######################
+SouthKern-iOS/.DS_Store
 .DS_Store
 .DS_Store?
 *.DS_Store
