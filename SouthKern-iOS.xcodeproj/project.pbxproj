@@ -196,7 +196,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D2F8289F5E5EFDE1D2C9038 /* Pods_SendBird_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendBird_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D1AF9F3C7796C06F9761CC /* Pods-SouthKern-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		52368845C9F75B30B70ED946 /* Pods_SouthKern_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthKern_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A602F10646684BFD71260771 /* Pods-SouthKern-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -423,7 +422,6 @@
 		DDAA521D90BDFBA7AA74D1FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D2F8289F5E5EFDE1D2C9038 /* Pods_SendBird_iOS.framework */,
 				52368845C9F75B30B70ED946 /* Pods_SouthKern_iOS.framework */,
 			);
 			name = Frameworks;
