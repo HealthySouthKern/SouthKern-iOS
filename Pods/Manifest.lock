@@ -17,9 +17,9 @@ PODS:
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - Fabric (1.9.0)
-  - FBSDKCoreKit (4.41.0):
+  - FBSDKCoreKit (4.42.0):
     - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.41.0):
+  - FBSDKLoginKit (4.42.0):
     - FBSDKCoreKit
   - Firebase/Auth (5.18.0):
     - Firebase/CoreOnly
@@ -210,9 +210,8 @@ DEPENDENCIES:
   - Crashlytics (~> 3.12.0)
   - Fabric (~> 1.9.0)
   - Firebase/Core
-  - Firebase/Database
   - Firebase/Functions
-  - FirebaseUI
+  - FirebaseUI (~> 6.1.1)
   - FLAnimatedImage (~> 1.0)
   - HTMLKit (~> 2.0)
   - MGSwipeTableCell
@@ -270,8 +269,8 @@ SPEC CHECKSUMS:
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  FBSDKCoreKit: 974810fe3806173f3777c68062fa8ed6fa59b59d
-  FBSDKLoginKit: 159a5c2eebe6a0774c3b128f5085128679233d2b
+  FBSDKCoreKit: aa42f1c384775f8b075f53a43080474278e9701d
+  FBSDKLoginKit: 373830c68aa48c9e8f0bfed93a3e32d2ca8963a0
   Firebase: 02f3281965c075426141a0ce1277e9de6649cab9
   FirebaseAnalytics: 23851fe602c872130a2c5c55040b302120346cc2
   FirebaseAuth: d85d052354447f30b4b2a805ab91b511458b56a6
@@ -304,6 +303,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: e15f3e3c57bcb45ef30497fc2f8f7889dd21a638
+PODFILE CHECKSUM: b50324a8257c87bfd5dc87bfbc8d99ef9298de21
 
 COCOAPODS: 1.6.0.beta.2

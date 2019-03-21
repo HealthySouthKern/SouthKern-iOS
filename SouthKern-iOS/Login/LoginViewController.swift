@@ -9,8 +9,10 @@
 import UIKit
 import SendBirdSDK
 import Photos
+import Firebase
+import FirebaseUI
 
-class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticateDelegate, NotificationDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticateDelegate, NotificationDelegate, FUIAuthDelegate {
 
     private var keyboardShown: Bool = false
     private var logoChanged: Bool = false
@@ -24,10 +26,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     @IBOutlet weak var userIdTextField: CustomTextField!
     @IBOutlet weak var versionInfoLabel: UILabel!
     
+    
+    // MARK: Properties
+    var authUser: User?
+    var displayName = "Anonymous"
+    var ref: DatabaseReference!
+    var sendbirdUser: SBDUser?
+    fileprivate var _refHandle: DatabaseHandle!
+    fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        configureAuth()
+        loginSession()
+        
         SBDConnectionManager.setAuthenticateDelegate(self)
         
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name: UIWindow.keyboardWillShowNotification, object: nil)
@@ -69,6 +84,85 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
         if autoLogin {
             self.connect()
         }
+    }
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        switch error {
+        case .some(let error as NSError) where UInt(error.code) == FUIAuthErrorCode.userCancelledSignIn.rawValue:
+                print("User cancelled sign-in")
+        case .some(let error as NSError) where error.userInfo[NSUnderlyingErrorKey] != nil:
+            print("Login error: \(error.userInfo[NSUnderlyingErrorKey]!)")
+        case .some(let error):
+            print("Login error: \(error.localizedDescription)")
+        case .none:
+            if let user = authDataResult?.user{
+                //signed(in: user)
+            }
+        }
+    }
+    
+    func configureAuth() {
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        
+        let providers: [FUIAuthProvider] = [
+            FUIEmailAuth(),
+            FUIGoogleAuth()
+        ]
+        authUI?.providers = providers
+        
+        // listen for changes in the authorization state
+        _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
+            // Do the Dew
+            
+            self.checkActiveUser(user: user)
+        }
+    }
+    
+    // MARK: isActiveUser
+    func checkActiveUser(user: User?){
+        // check if there is a current user
+        if let activeUser = user {
+            // check if the current app user is the current FIRUser
+            if self.authUser != activeUser {
+                self.authUser = activeUser
+                self.signedInStatus(isSignedIn: true)
+                
+            }
+        } else {
+            // user must sign in
+            self.signedInStatus(isSignedIn: false)
+            self.loginSession()
+        }
+    }
+    
+    // MARK: Sign In and Out
+    
+    func signedInStatus(isSignedIn: Bool) {
+        //connectButton.isHidden = isSignedIn
+        //connectButton.isHidden = !isSignedIn
+        //signOutButton.isHidden = !isSignedIn
+        
+        if isSignedIn {
+            // remove background blur (will use when showing image messages)
+            //Configure Stuff
+        }
+    }
+
+    func signOut() {
+        
+        do {
+            
+            try Auth.auth().signOut()
+        } catch {
+            print("unable to sign out: \(error)")
+        }
+    }
+
+    
+    func loginSession() {
+        let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
+        present(authViewController, animated: true, completion: nil)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
