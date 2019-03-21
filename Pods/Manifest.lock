@@ -218,7 +218,7 @@ DEPENDENCIES:
   - MGSwipeTableCell
   - NYTPhotoViewer (~> 1.1.0)
   - RSKImageCropper
-  - SendBirdSDK (~> 3.0.74)
+  - SendBirdSDK (~> 3.0.126)
   - TTTAttributedLabel
 
 SPEC REPOS:
@@ -304,6 +304,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 63e9e9d47cc4021c7a09c65779c2066cd8539990
+PODFILE CHECKSUM: e15f3e3c57bcb45ef30497fc2f8f7889dd21a638
 
 COCOAPODS: 1.6.0.beta.2

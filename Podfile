@@ -7,7 +7,7 @@ target 'SouthKern-iOS' do
   inhibit_all_warnings!
 
   # Pods for SendBird-iOS
-  pod 'SendBirdSDK', '~> 3.0.74'
+  pod 'SendBirdSDK', '~> 3.0.126'
   pod 'AlamofireImage', '~> 3.4.0'
   pod 'MGSwipeTableCell'
   pod 'FLAnimatedImage', '~> 1.0'
