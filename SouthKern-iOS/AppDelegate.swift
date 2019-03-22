@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Override point for customization after application launch.
         SBDOptions.setConnectionTimeout(5)
         SBDOptions.setAuthenticationTimeout(10)
-        
-        SBDMain.initWithApplicationId("9DA1B1F4-0BE6-4DA8-82C5-2E81DAB56F23")
+        // SouthKernTest01
+        SBDMain.initWithApplicationId("91EEEE6D-8D4A-4FA4-9A52-0B8E2DDD64D0")
         
         self.registerForRemoteNotification()
         

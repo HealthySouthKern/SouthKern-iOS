@@ -210,6 +210,7 @@ DEPENDENCIES:
   - Crashlytics (~> 3.12.0)
   - Fabric (~> 1.9.0)
   - Firebase/Core
+  - Firebase/Database
   - Firebase/Functions
   - FirebaseUI (~> 6.1.1)
   - FLAnimatedImage (~> 1.0)
@@ -303,6 +304,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: b50324a8257c87bfd5dc87bfbc8d99ef9298de21
+PODFILE CHECKSUM: 6e0d2e55cd56d0d9b2dd61e1706232f7eab85e38
 
 COCOAPODS: 1.6.0.beta.2

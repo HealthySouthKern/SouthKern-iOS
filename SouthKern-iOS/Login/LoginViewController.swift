@@ -28,20 +28,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     
     
     // MARK: Properties
-    var authUser: User?
-    var displayName = "Anonymous"
-    var ref: DatabaseReference!
+    var firebaseUser: User?
+    var dataReference: DatabaseReference!
+    var funcReference: Functions!
     var sendbirdUser: SBDUser?
-    fileprivate var _refHandle: DatabaseHandle!
-    fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
+    fileprivate(set) var firebaseAuth: Auth!
+    fileprivate(set) var authUI: FUIAuth?
+    fileprivate var dataReferenceHandle: DatabaseHandle!
+    fileprivate var authStateDidChangeHandle: AuthStateDidChangeListenerHandle!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        configureAuth()
-        loginSession()
+        initializeFirebaseComponents()
+        setAuthHandler()
+        presentAuthViewController()
         
         SBDConnectionManager.setAuthenticateDelegate(self)
         
@@ -86,6 +90,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
         }
     }
     
+    func initializeFirebaseComponents(){
+        
+        firebaseAuth = Auth.auth()
+        dataReference = Database.database().reference()
+        funcReference = Functions.functions()
+    }
+    
+    func setAuthHandler() {
+        
+        // listen for changes in the authorization state
+        authStateDidChangeHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
+            if let firebaseUser = Auth.auth().currentUser {
+                self.setAppUserInfo(firebaseUser: firebaseUser)
+            } else {
+                
+            }
+        }
+    }
+    
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         switch error {
         case .some(let error as NSError) where UInt(error.code) == FUIAuthErrorCode.userCancelledSignIn.rawValue:
@@ -95,14 +118,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
         case .some(let error):
             print("Login error: \(error.localizedDescription)")
         case .none:
-            if let user = authDataResult?.user{
-                //signed(in: user)
+            if let firebaseUser = authDataResult?.user{
+                
+                setAppUserInfo(firebaseUser: firebaseUser)
             }
         }
     }
     
-    func configureAuth() {
-        let authUI = FUIAuth.defaultAuthUI()
+    func configureFirebaseAuthUI(){
+        
+        authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
         
         let providers: [FUIAuthProvider] = [
@@ -110,13 +135,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
             FUIGoogleAuth()
         ]
         authUI?.providers = providers
+    }
+    
+    func setAppUserInfo(firebaseUser: User){
         
-        // listen for changes in the authorization state
-        _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
-            // Do the Dew
-            
-            self.checkActiveUser(user: user)
+        let userDefault = UserDefaults.standard
+        userDefault.setValue(firebaseUser.uid, forKey: "uid")
+        userDefault.setValue(firebaseUser.email , forKey: "user_id")
+        userDefault.setValue(firebaseUser.displayName, forKey: "user_name")
+        let photoURL = firebaseUser.photoURL?.absoluteString
+        userDefault.setValue(photoURL! as NSString, forKey: "user_picture")
+        
+        let action: AuthTokenCallback = {(token, error) in
+            if let error = error {
+                print("Error on Getting Auth Token: \(error.localizedDescription)")
+            }
+            if let authUIToken = token {
+                userDefault.setValue(authUIToken, forKey: "firebaseToken")
+            }
         }
+            
+        firebaseUser.getIDToken(completion: action)
+        userDefault.synchronize()
     }
     
     // MARK: isActiveUser
@@ -124,15 +164,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
         // check if there is a current user
         if let activeUser = user {
             // check if the current app user is the current FIRUser
-            if self.authUser != activeUser {
-                self.authUser = activeUser
+            if self.firebaseUser != activeUser {
+                self.firebaseUser = activeUser
                 self.signedInStatus(isSignedIn: true)
                 
             }
         } else {
             // user must sign in
             self.signedInStatus(isSignedIn: false)
-            self.loginSession()
+            self.presentAuthViewController()
         }
     }
     
@@ -160,7 +200,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     }
 
     
-    func loginSession() {
+    func presentAuthViewController() {
         let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
         present(authViewController, animated: true, completion: nil)
     }
@@ -201,7 +241,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     }
     
     @objc func clickConnectButton(_ sender: Any) {
-        self.connect()
+        //self.connect()
+        self.signOut()
     }
     
     func connect() {
