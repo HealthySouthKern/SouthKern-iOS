@@ -33,19 +33,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     var funcReference: Functions!
     var sendbirdUser: SBDUser?
     fileprivate(set) var firebaseAuth: Auth!
-    fileprivate(set) var authUI: FUIAuth?
+    fileprivate(set) var authUIInstance: FUIAuth?
     fileprivate var dataReferenceHandle: DatabaseHandle!
     fileprivate var authStateDidChangeHandle: AuthStateDidChangeListenerHandle!
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       
         initializeFirebaseComponents()
         setAuthHandler()
-        presentAuthViewController()
+        configureFirebaseAuthUI()
         
         SBDConnectionManager.setAuthenticateDelegate(self)
         
@@ -90,26 +93,38 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
         }
     }
     
-    func initializeFirebaseComponents(){
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //authUIInstance?.auth?.removeStateDidChangeListener(authStateDidChangeHandle)
         
-        firebaseAuth = Auth.auth()
-        dataReference = Database.database().reference()
-        funcReference = Functions.functions()
+    }
+    
+    func initializeFirebaseComponents(){
+        print("initializeFirebaseComponents")
+        if firebaseAuth == nil {
+            firebaseAuth = Auth.auth()
+        }
+        if dataReference == nil {
+            dataReference = Database.database().reference()
+        }
+        if funcReference == nil{
+            funcReference = Functions.functions()
+        }
     }
     
     func setAuthHandler() {
-        
+        print("setAuthHandler")
         // listen for changes in the authorization state
-        authStateDidChangeHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
-            if let firebaseUser = Auth.auth().currentUser {
-                self.setAppUserInfo(firebaseUser: firebaseUser)
-            } else {
-                
-            }
+        authStateDidChangeHandle = firebaseAuth.addStateDidChangeListener { (auth: Auth, user: User?) in
+            print("checkActiveUser")
+            self.checkActiveUser(user: user)
+       
         }
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        print("authUI")
+
         switch error {
         case .some(let error as NSError) where UInt(error.code) == FUIAuthErrorCode.userCancelledSignIn.rawValue:
                 print("User cancelled sign-in")
@@ -118,27 +133,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
         case .some(let error):
             print("Login error: \(error.localizedDescription)")
         case .none:
-            if let firebaseUser = authDataResult?.user{
-                
-                setAppUserInfo(firebaseUser: firebaseUser)
+            print("No Error")
             }
+        if let firebaseUser = authDataResult?.user{
+            print("didSignInWith")
+            setAppUserInfo(firebaseUser: firebaseUser)
         }
     }
     
     func configureFirebaseAuthUI(){
+        print("configureFirebaseAuthUI")
         
-        authUI = FUIAuth.defaultAuthUI()
-        authUI?.delegate = self
-        
-        let providers: [FUIAuthProvider] = [
-            FUIEmailAuth(),
-            FUIGoogleAuth()
-        ]
-        authUI?.providers = providers
+            print("authUIInstance is nil")
+            authUIInstance = FUIAuth.defaultAuthUI()
+            authUIInstance?.delegate = self
+            
+            let providers: [FUIAuthProvider] = [
+                FUIEmailAuth(),
+                FUIGoogleAuth()
+            ]
+            authUIInstance?.providers = providers
+            
+            presentAuthViewController()
     }
     
     func setAppUserInfo(firebaseUser: User){
-        
+        print("setAppUserInfo")
+
         let userDefault = UserDefaults.standard
         userDefault.setValue(firebaseUser.uid, forKey: "uid")
         userDefault.setValue(firebaseUser.email , forKey: "user_id")
@@ -162,6 +183,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     // MARK: isActiveUser
     func checkActiveUser(user: User?){
         // check if there is a current user
+        print("checkActiveUser")
         if let activeUser = user {
             // check if the current app user is the current FIRUser
             if self.firebaseUser != activeUser {
@@ -171,8 +193,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
             }
         } else {
             // user must sign in
+            print("user must sign in")
             self.signedInStatus(isSignedIn: false)
-            self.presentAuthViewController()
+            self.configureFirebaseAuthUI()
         }
     }
     
@@ -190,10 +213,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     }
 
     func signOut() {
-        
+        print("signOut")
+
         do {
-            
-            try Auth.auth().signOut()
+            try authUIInstance?.signOut()
         } catch {
             print("unable to sign out: \(error)")
         }
@@ -201,8 +224,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
 
     
     func presentAuthViewController() {
-        let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
-        present(authViewController, animated: true, completion: nil)
+        print("presentAuthViewController")
+
+        let authViewController = authUIInstance?.authViewController()
+        present(authViewController!, animated: true, completion: nil)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -246,6 +271,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, SBDAuthenticat
     }
     
     func connect() {
+        print("connect")
+
         self.view.endEditing(true)
         if SBDMain.getConnectState() != .open {
             let userId = self.userIdTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
